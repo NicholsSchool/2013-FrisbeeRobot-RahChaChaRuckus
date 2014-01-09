@@ -1,7 +1,7 @@
 Nichols-Robitics-Team-4930
 ==========================
 
-Testing C++ Code.
+C++ Test Code.
 
 Goal (1) Initalize motors and joystick.
 
