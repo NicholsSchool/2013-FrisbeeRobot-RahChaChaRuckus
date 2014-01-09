@@ -1,8 +1,0 @@
-Nichols-Test
-============
-
-This is our test repo.
-
-============
-
-This a commit from Rebecca. (:
