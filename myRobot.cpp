@@ -9,7 +9,7 @@
  * @goal (3) Move robot forwad during autonomous mode.
  * @goal (4) Get C++ code compiled and running on the 2013 robot's cRIO.
  * @author Jon Kiddy
- * @version 0.0.1 2014-01-07
+ * @version 0.0.2 2014-02-01
  */ 
 class Robot4930 : public SimpleRobot
 {
@@ -26,10 +26,14 @@ public:
 	Robot4930():
 		// Initialization List
 		robotChasis(1, 2),
-		rightStick(2),
-		leftStick(1)
+		rightStick(1),
+		leftStick(2)
 	{
 		robotChasis.SetExpiration(0.1);
+		robotChasis.SetInvertedMotor(robotChasis.kRearLeftMotor, true);
+		robotChasis.SetInvertedMotor(robotChasis.kRearRightMotor, true);
+		robotChasis.SetInvertedMotor(robotChasis.kFrontLeftMotor, true);
+		robotChasis.SetInvertedMotor(robotChasis.kFrontRightMotor, true);
 	}
 
 	/**
@@ -64,7 +68,7 @@ public:
 		while (IsOperatorControl())
 		{
 			// Robot driving is handed over to the Drive Station Operator.
-			robotChasis.TankDrive(leftStick, rightStick);
+			robotChasis.TankDrive(leftStick.GetY(), rightStick.GetY());
 			
 			// Wait five thousandths of a second before proceeding with the while loop.
 			Wait(0.005);
