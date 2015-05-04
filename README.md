@@ -1,3 +1,6 @@
+![status](https://img.shields.io/badge/status-inactive-yellowgreen.svg)
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+
 Nichols-Robitics-Team-4930
 ==========================
 
